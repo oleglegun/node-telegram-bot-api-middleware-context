@@ -1,0 +1,21 @@
+{
+  "name": "node-telegram-bot-api-middleware-context",
+  "version": "0.0.1",
+  "description": "Request context creation middleware for 'node-telegram-bot-api-middleware'.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleglegun/node-telegram-bot-api-middleware-context.git"
+  },
+  "keywords": [
+    "telegram",
+    "node-telegram-bot-api",
+    "node-telegram-bot-api-middleware"
+  ],
+  "author": "Oleg Legun <oleg.legun@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oleglegun/node-telegram-bot-api-middleware-context/issues"
+  },
+  "homepage": "https://github.com/oleglegun/node-telegram-bot-api-middleware-context#readme"
+}
