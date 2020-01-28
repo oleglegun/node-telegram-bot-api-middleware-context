@@ -1,6 +1,6 @@
 {
   "name": "node-telegram-bot-api-middleware-context",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Request context creation middleware for 'node-telegram-bot-api-middleware'.",
   "main": "index.js",
   "repository": {

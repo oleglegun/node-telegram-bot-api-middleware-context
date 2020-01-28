@@ -48,4 +48,4 @@ function createContextMiddleware() {
     }
 }
 
-module.export = createContextMiddleware
+module.exports = createContextMiddleware
