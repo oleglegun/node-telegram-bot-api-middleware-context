@@ -31,6 +31,7 @@ function createContextMiddleware() {
                         return obj[prop]
                     },
                     set: function(obj, prop, val) {
+                        obj[prop] = val
                         contextStore.set(key, obj)
                         return true
                     },
