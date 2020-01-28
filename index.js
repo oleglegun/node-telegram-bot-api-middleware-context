@@ -1,4 +1,16 @@
-module.exports = function createContextMiddleware() {
+/**
+ * @typedef {Object} MiddlewareContext
+ *
+ * @property {Object<string, any>} msg
+ * @property {number} chatId
+ * @property {Object<string, any>} ctx - Added context property
+ */
+
+/**
+ * Creates context middleware function.
+ * @return {function(this: MiddlewareContext)} Context middleware function
+ */
+function createContextMiddleware() {
     const contextStore = new WeakMap()
 
     return function() {
@@ -6,6 +18,7 @@ module.exports = function createContextMiddleware() {
 
         Object.defineProperty(this, 'ctx', {
             get() {
+                /** @type T */
                 let ctx = contextStore.get(key)
 
                 if (!ctx) {
@@ -26,10 +39,12 @@ module.exports = function createContextMiddleware() {
             },
             set() {
                 throw new Error(
-                    "Values cannot be assigned directly to 'this.ctx'. Use custom properties to save data, e.g. 'this.ctx.myProperty = myValue'."
+                    "Value cannot be assigned directly to 'this.ctx'. Use custom properties to save data, e.g. 'this.ctx.myProperty = myValue'."
                 )
             },
             enumerable: true,
         })
     }
 }
+
+module.export = createContextMiddleware
